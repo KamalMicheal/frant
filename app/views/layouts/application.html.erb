@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Frant4</title>
-  <%= stylesheet_link_tag    'bootstrap_ar', media: 'all' %>
+  <title><%= I18n.t(:website_name)%></title>
+  <%= stylesheet_link_tag 'bootstrap', media: 'all' %>
+  <%= stylesheet_link_tag 'style', media: 'all'%>
+  <%= stylesheet_link_tag 'jquery.countdown', media: 'all'%>
+  <%= stylesheet_link_tag 'megamenu.css', media: 'all'%>
+  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900'%>
+
+  <%= javascript_include_tag 'jquery-1.11.1.min'%>
+  <%= javascript_include_tag 'jquery.easydropdown'%>
+  <%= javascript_include_tag 'megamenu'%>
+  <%= javascript_include_tag 'jquery.countdown'%>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'script' %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="header_top">
+  <div class="container">
+    <div class="header_top-box">
+      <div class="header-top-left">
+        <div class="box">
+        </div>
+        <div class="box1">
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="cssmenu">
+        <ul>
+          <li>
+            <%= link_to I18n.t(:home_page), home_index_path %>
+          </li>
+          <li>
+            <%= link_to I18n.t(:books_title), books_index_path%>
+          </li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<div class="header_bottom">
+  <div class="container">
+    <div class="search">
+      <input type="text" placeholder="<%=I18n.t(:search)%>">
+      <input type="submit" value="<%=I18n.t(:search)%>">
+    </div>
+  </div>
+</div>
 
 <%= yield %>
+<div class="footer">
+  <div class="container">
+    <ul class="footer_nav">
+      <li>
+        <%= link_to I18n.t(:home_page), home_index_path %>
+      </li>
+      <li>
+        <%= link_to I18n.t(:books_title), books_index_path %>
+      </li>
+    </ul>
+  </div>
+</div>
 
 </body>
 </html>

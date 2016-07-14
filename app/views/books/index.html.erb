@@ -1,11 +1,62 @@
-<h1>
-  <%= I18n.t :books_title%>
-</h1>
-<% @books.each do |book| %>
-<p>
-  <b><%= book.title%></b>
-</p>
-<%end%>
+<div class="content_top">
+  <div class="container">
+    <div class="column_center">
+      <h1>
+        <%= I18n.t :books_title%>
+      </h1>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="content_middle_bottom">
+    <div class="col-md-4">
+      <ul class="spinner">
+        <i class="spinner_icon"> </i>
+        <li class="spinner_head"><h3>Search By</h3></li>
+        <div class="clearfix"> </div>
+      </ul>
+      <div class="timer_box">
+        <div class="thumb"> </div>
+        <div class="thumb_desc">
+          <div class="price">
+          </div>
+        </div>
+        <a href="#"><div class="m_3 deal"><div class="link3">Search</div></div></a>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <ul class="spinner">
+        <i class="paperclip"> </i>
+        <li class="spinner_head"><h3>Search path</h3></li>
+        <div class="clearfix"> </div>
+      </ul>
+      <% @books.each do |book| %>
+          <div class="a-top">
+            <div class="left-grid">
+            </div>
+            <div class="right-grid">
+              <h4><a href="#"><%= book.title%></a></h4>
+              <p><%= book.abstract %></p>
+              <%= I18n.t(:author) %>:
+              <%= book.author.name %>
+              <br>
+              <%= I18n.t("category") %>:
+              <%= book.category.name%>
+            </div>
+            <div class="but">
+              <a class="arrow" href="#"><%= I18n.t(:download)%></a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+      <%end%>
+      <%=
+        will_paginate @books
+      %>
+    </div>
+    <div class="clearfix"></div>
+  </div>
 
-<%= will_paginate @books %>
+</div>
+
+
 

@@ -1,16 +1,13 @@
 Rails.application.routes.draw do
+  get '/', to: 'home#index'
+  get 'home/index'
+  get '/books', to: 'books#index'
   get 'books/index'
-
   get 'books/details'
-
   get 'books/new'
-
   get 'books/create'
-
   get 'books/edit'
-
   get 'books/update'
-
   get 'books/delete'
 
   # The priority is based upon order of creation: first created -> highest priority.

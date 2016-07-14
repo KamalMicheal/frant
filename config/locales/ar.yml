@@ -1,2 +1,12 @@
 ar:
-  books_title: الكتب
+  will_paginate:
+    previous_label: السابق
+    next_label: التالي
+    page_gap: " ... "
+  books_title: المكتبة
+  author: المؤلف
+  category: التصنيف
+  home_page: الرئيسية
+  website_name: موقع القس أنطونيوس فهمي
+  search: بحث
+  download: تحميل

@@ -6,5 +6,5 @@ class Book < ActiveRecord::Base
 
   validates_presence_of :title, :file
 
-  self.per_page = 10
+  self.per_page = 20
 end
