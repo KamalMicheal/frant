@@ -1,28 +1,21 @@
-== README
+= Fr Antonios Fahmy Website
+= موقع القس انطونيوس فهمي
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== GETTING STARTED
+Things you need:
 
-Things you may want to cover:
+  Ruby:    ruby 2.2.1p85 (2015-02-26 revision 49769)
+  Rubygem: 2.4.8
+  Bundler: Bundler version 1.8.4 (gem install bundler -v '1.8.4')
 
-* Ruby version
+== Installation
+  git clone https://github.com/KamalMicheal/frant.git
+  cd frant
+  bundle install
+  rake db:drop:all
+  rake db:create:all
+  rake db:migrate
+  rake db:migrate RAILS_ENV=test
+  rspec
+  rake db:seed
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
