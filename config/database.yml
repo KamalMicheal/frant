@@ -1,0 +1,25 @@
+common: &common
+  adapter: mysql2
+  encoding: utf8
+  reconnect: true
+
+development:
+  <<: *common
+  host:            localhost
+  username:        root
+  password:        root
+  database:        frant4_development
+
+test:
+  <<: *common
+  host:            localhost
+  username:        root
+  password:        root
+  database:        frant4_test
+
+production:
+  <<: *common
+  host:            localhost
+  username:        root
+  password:        root
+  database:        frant4_production

@@ -1,0 +1,11 @@
+<h1>
+  <%= I18n.t :books_title%>
+</h1>
+<% @books.each do |book| %>
+<p>
+  <b><%= book.title%></b>
+</p>
+<%end%>
+
+<%= will_paginate @books %>
+
