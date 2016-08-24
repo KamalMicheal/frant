@@ -1,4 +1,13 @@
 ar:
+  date:
+    month_names: [~, يناير, فبراير, مارس, أبريل, مايو, يونيو, يوليو, أغسطس, سبتمبر, أكتوبر, نوفمبر, ديسمبر]
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%B %d, %Y"
+  time:
+    formats:
+      default: "%d %B %Y"
   will_paginate:
     previous_label: السابق
     next_label: التالي
@@ -10,3 +19,10 @@ ar:
   website_name: موقع القس أنطونيوس فهمي
   search: بحث
   download: تحميل
+  books_found:
+    zero: لم يتم العثور على كتب
+    other: تم العثور على %{count} كتاب
+  add_new: اضافة
+  edit: تعديل
+  delete: مسح
+  delete_confirmation: هل انت متاكد من المسح؟

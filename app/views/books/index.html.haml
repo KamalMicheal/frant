@@ -1,0 +1,9 @@
+%h1
+  = I18n.t :books_title
+- if is_admin?
+  = link_to I18n.t(:add_new), {:controller => 'books', :action => 'new'}
+
+- @books.each do |book|
+  = render 'book', :book => book
+
+= will_paginate @books

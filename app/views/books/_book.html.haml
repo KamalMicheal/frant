@@ -1,0 +1,17 @@
+%h2
+  %a
+    = book.title
+%b
+  = I18n.t :author
+= book.author.name
+%br
+%b
+  = I18n.t :category
+= book.category.name
+%br
+= I18n.l book.created_at
+%br
+- if is_admin?
+  = link_to I18n.t(:edit)
+  |
+  = link_to I18n.t(:delete)

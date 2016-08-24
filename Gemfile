@@ -18,6 +18,8 @@ gem 'coptic_date', '2.4.0'
 gem 'rsolr'
 gem 'rsolr-ext'
 gem 'better_errors'
+gem 'guard'
+gem 'guard-rspec'
 
 group :development, :test do
   gem 'byebug'

@@ -9,13 +9,5 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
-Rails.application.config.assets.precompile += %w( bootstrap.css )
-Rails.application.config.assets.precompile += %w( style.css )
-Rails.application.config.assets.precompile += %w( jquery.countdown.css )
-Rails.application.config.assets.precompile += %w( megamenu.css )
 
-Rails.application.config.assets.precompile += %w( jquery-1.11.1.min.js )
-Rails.application.config.assets.precompile += %w( jquery.easydropdown.js )
-Rails.application.config.assets.precompile += %w( megamenu.js )
-Rails.application.config.assets.precompile += %w( jquery.countdown.js )
-Rails.application.config.assets.precompile += %w( script.js )
+Rails.application.config.assets.precompile += ['*.js', '*.css', '*.sass']

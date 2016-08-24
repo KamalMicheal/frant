@@ -1,0 +1,8 @@
+%html{ 'xml:lang' => I18n.locale, :lang => 'ar', :dir => 'rtl', 'ng-app': 'bhlApp' }
+  %head
+  %body
+    %h2
+      = link_to I18n.t(:home_page), {:controller => :home, :action => :index}
+      |
+      = link_to I18n.t(:books_title), {:controller => :books, :action => :index}
+    = yield
