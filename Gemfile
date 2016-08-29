@@ -20,9 +20,10 @@ gem 'rsolr-ext'
 gem 'better_errors'
 gem 'guard'
 gem 'guard-rspec'
+gem 'cucumber'
+gem 'webrat'
 
 group :development, :test do
-  gem 'byebug'
   gem 'rspec-rails'
   gem 'factory_girl_rails', :require => false
   gem 'capybara'

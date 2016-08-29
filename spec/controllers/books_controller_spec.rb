@@ -3,9 +3,21 @@ require 'rails_helper'
 RSpec.describe BooksController, type: :controller do
 
   describe 'GET #index' do
+    before :all do
+      Book.delete_all
+      @book = FactoryGirl.create :book, title: 'Test Book'
+    end
+
     it 'returns http success' do
       get :index
       expect(response).to have_http_status(:success)
+    end
+
+    it 'returns a book in listing' do
+      get :index
+      books = assigns(:books)
+      expect(books.count).to eq(1)
+      expect(books).to include(@book)
     end
   end
 

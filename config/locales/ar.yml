@@ -26,3 +26,6 @@ ar:
   edit: تعديل
   delete: مسح
   delete_confirmation: هل انت متاكد من المسح؟
+  title: العنوان
+  abstract: الملخص
+  file: الملف
