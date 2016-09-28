@@ -29,3 +29,9 @@ ar:
   title: العنوان
   abstract: الملخص
   file: الملف
+  save: حفظ
+  reset: إعادة تعيين
+  are_you_sure: هل أنت واثق؟
+  item_was_added_successfully: تمت إضافة العنصر بنجاح
+  item_was_modified_successfully: تم تعديل العنصر بنجاح
+  item_was_deleted_successfully: تم حذف العنصر بنجاح

@@ -1,0 +1,31 @@
+= form_for @book, url: {action: action} do |f|
+  .formgroup
+    = f.label I18n.t(:title)
+    = f.text_field :title,
+                   MinLength: 4,
+                   MaxLength: 100,
+                   required: true,
+                   class: 'form-control'
+
+  .formgroup
+    = f.label I18n.t(:abstract)
+    = f.text_area :abstract,
+                   MaxLength: 250,
+                   rows: 5,
+                   columns: 100,
+                   class: 'form-control'
+  .formgroup
+    = f.label I18n.t(:file)
+    = f.file_field :file, class: 'form-control'
+
+  .formgroup
+    = f.label I18n.t(:author)
+    = f.select :author_id, get_authors_for_select, {class: 'form-control'}
+
+  .formgroup
+    = f.label I18n.t(:category)
+    = f.select :category_id, get_categories_for_select, class: 'form-control'
+
+  .formgroup
+    = f.submit I18n.t(:save), class: 'btn btn-success'
+    = f.button I18n.t(:reset), type: 'reset', class: 'btn btn-warning'

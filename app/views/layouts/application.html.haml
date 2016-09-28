@@ -1,8 +1,27 @@
 %html{ 'xml:lang' => I18n.locale, :lang => 'ar', :dir => 'rtl', 'ng-app': 'bhlApp' }
   %head
+    = stylesheet_link_tag 'bootstrap-arabic'
+    = stylesheet_link_tag 'bootstrap-arabic-theme'
+    = javascript_include_tag 'bootstrap-arabic'
   %body
-    %h2
-      = link_to I18n.t(:home_page), {:controller => :home, :action => :index}
-      |
-      = link_to I18n.t(:books_title), {:controller => :books, :action => :index}
-    = yield
+    %nav{class: 'navbar navbar-inverse navbar-fixed-top'}
+      .container
+        .navbar-header
+          = link_to I18n.t(:website_name), {controller: :home, action: :index}, {class: 'navbar-brand'}
+        #navbar{class: 'navbar-collapse collapse'}
+          %ul{class: 'nav navbar-nav'}
+            %li
+              = link_to I18n.t(:home_page), {:controller => :home, :action => :index}
+            %li
+              = link_to I18n.t(:books_title), {:controller => :books, :action => :index}
+
+
+    %div{class: 'alert alert-success'}
+      = flash[:notice]
+    %div{class: 'container theme-showcase', role: 'main'}
+      .container
+        .page-header
+          %h1
+            = @page_title
+        .row
+          = yield

@@ -5,6 +5,7 @@ class Book < ActiveRecord::Base
   # :title, :abstract, :file, :author, :category
 
   validates_presence_of :title, :file
+  mount_uploader :file, FileUploader
 
   self.per_page = 20
 end

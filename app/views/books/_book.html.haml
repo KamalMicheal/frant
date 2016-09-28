@@ -1,17 +1,17 @@
-%h2
-  %a
-    = book.title
-%b
-  = I18n.t :author
-= book.author.name
-%br
-%b
-  = I18n.t :category
-= book.category.name
-%br
-= I18n.l book.created_at
-%br
-- if is_admin?
-  = link_to I18n.t(:edit)
-  |
-  = link_to I18n.t(:delete)
+.row
+  %h3
+    %a
+      = book.title
+  %strong
+    = I18n.t :author
+  = book.author.name
+  %br
+  %b
+    = I18n.t :category
+  = book.category.name
+  %br
+  = I18n.l book.created_at
+  %br
+  - if is_admin?
+    = link_to I18n.t(:edit), url_for(action: :edit, id: book.id), class: 'btn btn-sm btn-success'
+    = link_to I18n.t(:delete), url_for(action: :delete, id: book.id), method: :delete, confirm: I18n.t(:are_you_sure), class: 'btn btn-sm btn-danger'
